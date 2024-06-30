@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <title>BSC--B</title>
+</head>
+<body>
+    <!-- Header Nav Start -->
+    <header class="header" data-aos="fade-down" data-aos-duration="800">
+        <nav class="container">
+            <div class="nav-brand">
+                <button type="button" class="nav-btn">
+                    <input type="checkbox" id="checkbox">
+                        <label for="checkbox" class="toggle">
+                        <div class="bar bar--top"></div>
+                        <div class="bar bar--middle"></div>
+                        <div class="bar bar--bottom"></div>
+                    </label>
+                </button>
+                <a href="#" class="navbar-logo">
+                    <img src="./img/logo.jpg" alt="Tatalogam logo" />
+                    <div class="nav-title">
+                        <span>PT. Tatalogam Lestari</span>
+                    </div>
+                </a>    
+            </div>
+            <div class="nav-user">
+                <button class="user-avatar" data-dropdown-toggle="dropdown">
+                    <img src="./img/avatar.png" alt="user photo">
+                    <p>admin@tatalogam.com
+                        <img src="./icons/dropdown.svg" id="drop-src" alt="SVG dropdown"/>
+                    </p>
+                </button>
+                <ul class="dropdown-avatar" id="dropdown">
+                    <li>
+                        <a
+                        data-modal-target="authentication-modal"
+                        data-modal-toggle="authentication-modal"
+                        class="change-role" 
+                        href="#">
+                            Change role
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Nav End -->
+
+    <!-- Modal role start -->
+    <!-- Main modal -->
+    <div id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-[60] hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative w-full max-w-md max-h-full">
+            <div class="relative bg-white rounded-lg shadow">
+                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-red-500 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="authentication-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+                <div class="px-6 py-6 lg:px-8">
+                    <h3 class="mb-4 text-xl font-medium text-gray-900">Custom Text</h3>
+                    <form class="space-y-6" action="#">
+                        <div>
+                            <label for="input" class="block mb-2 text-sm font-medium text-gray-900">Your text</label>
+                            <input type="text" name="name" id="input" class="bg-gray-50 w-full border border-gray-300 text-gray-900 text-sm rounded-lg p-2" placeholder="text here..." required>
+                        </div>
+                        <button type="submit" class="text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal role end -->
+
+    <!-- sidebar start -->
+    <aside class="sidebar">
+        <div class="sidebar-inner">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="#">
+                        <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4498 10.275L11.9998 3.1875L2.5498 10.275L2.9998 11.625H3.7498V20.25H20.2498V11.625H20.9998L21.4498 10.275ZM5.2498 18.75V10.125L11.9998 5.0625L18.7498 10.125V18.75H14.9999V14.3333L14.2499 13.5833H9.74988L8.99988 14.3333V18.75H5.2498ZM10.4999 18.75H13.4999V15.0833H10.4999V18.75Z" fill="#ffffff"></path> </g></svg>
+                        <span>Home</span>
+                    </a>
+                    <hr>
+                </li>
+                <ul class="sidebar-navigation">
+                    <li>
+                        <button type="button">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Arrow / Arrow_Sub_Down_Right"> <path id="Vector" d="M13 11L18 16M18 16L13 21M18 16H10.1969C9.07899 16 8.5192 16 8.0918 15.7822C7.71547 15.5905 7.40973 15.2839 7.21799 14.9076C7 14.4798 7 13.9201 7 12.8V3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+                        <span>Bsc</span>
+                        <svg width="22px" height="22px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 13L12 18L17 13M7 6L12 11L17 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Arrow / Arrow_Sub_Down_Right"> <path id="Vector" d="M13 11L18 16M18 16L13 21M18 16H10.1969C9.07899 16 8.5192 16 8.0918 15.7822C7.71547 15.5905 7.40973 15.2839 7.21799 14.9076C7 14.4798 7 13.9201 7 12.8V3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+                        <span>Isc</span>
+                        <svg width="22px" height="22px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 13L12 18L17 13M7 6L12 11L17 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Arrow / Arrow_Sub_Down_Right"> <path id="Vector" d="M13 11L18 16M18 16L13 21M18 16H10.1969C9.07899 16 8.5192 16 8.0918 15.7822C7.71547 15.5905 7.40973 15.2839 7.21799 14.9076C7 14.4798 7 13.9201 7 12.8V3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+                        <span>Log</span>
+                        <svg width="22px" height="22px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 13L12 18L17 13M7 6L12 11L17 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Arrow / Arrow_Sub_Down_Right"> <path id="Vector" d="M13 11L18 16M18 16L13 21M18 16H10.1969C9.07899 16 8.5192 16 8.0918 15.7822C7.71547 15.5905 7.40973 15.2839 7.21799 14.9076C7 14.4798 7 13.9201 7 12.8V3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+                        <span>Mapping</span>
+                        <svg width="22px" height="22px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 13L12 18L17 13M7 6L12 11L17 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Arrow / Arrow_Sub_Down_Right"> <path id="Vector" d="M13 11L18 16M18 16L13 21M18 16H10.1969C9.07899 16 8.5192 16 8.0918 15.7822C7.71547 15.5905 7.40973 15.2839 7.21799 14.9076C7 14.4798 7 13.9201 7 12.8V3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+                        <span>Master Data</span>
+                        <svg width="22px" height="22px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 13L12 18L17 13M7 6L12 11L17 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Arrow / Arrow_Sub_Down_Right"> <path id="Vector" d="M13 11L18 16M18 16L13 21M18 16H10.1969C9.07899 16 8.5192 16 8.0918 15.7822C7.71547 15.5905 7.40973 15.2839 7.21799 14.9076C7 14.4798 7 13.9201 7 12.8V3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+                        <span>Report</span>
+                        <svg width="22px" height="22px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 13L12 18L17 13M7 6L12 11L17 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Arrow / Arrow_Sub_Down_Right"> <path id="Vector" d="M13 11L18 16M18 16L13 21M18 16H10.1969C9.07899 16 8.5192 16 8.0918 15.7822C7.71547 15.5905 7.40973 15.2839 7.21799 14.9076C7 14.4798 7 13.9201 7 12.8V3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+                        <span>Rules</span>
+                        <svg width="22px" height="22px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 13L12 18L17 13M7 6L12 11L17 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Arrow / Arrow_Sub_Down_Right"> <path id="Vector" d="M13 11L18 16M18 16L13 21M18 16H10.1969C9.07899 16 8.5192 16 8.0918 15.7822C7.71547 15.5905 7.40973 15.2839 7.21799 14.9076C7 14.4798 7 13.9201 7 12.8V3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+                        <span>Scorecard</span>
+                        <svg width="22px" height="22px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 13L12 18L17 13M7 6L12 11L17 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Arrow / Arrow_Sub_Down_Right"> <path id="Vector" d="M13 11L18 16M18 16L13 21M18 16H10.1969C9.07899 16 8.5192 16 8.0918 15.7822C7.71547 15.5905 7.40973 15.2839 7.21799 14.9076C7 14.4798 7 13.9201 7 12.8V3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+                        <span>Setting</span>
+                        <svg width="22px" height="22px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 13L12 18L17 13M7 6L12 11L17 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Arrow / Arrow_Sub_Down_Right"> <path id="Vector" d="M13 11L18 16M18 16L13 21M18 16H10.1969C9.07899 16 8.5192 16 8.0918 15.7822C7.71547 15.5905 7.40973 15.2839 7.21799 14.9076C7 14.4798 7 13.9201 7 12.8V3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+                        <span>User</span>
+                        <svg width="22px" height="22px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 13L12 18L17 13M7 6L12 11L17 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </aside>
+    <!-- sidebar end -->
+
+    <!-- drawer backdrop start -->
+    <div id="drawer-backdrop" class="drawer"></div>
+    <!-- drawer backdrop end -->
+
+    <!-- hero section start -->
+    <div class="hero">
+        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+            <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#43a5f6] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+        </div>
+        <div class="hero-inner" data-aos="fade-up" data-aos-duration="1500">
+            <div class="mini-title">
+                <div class="mini-ring" >
+                    Announcing our next round of product. <a href="#"><span class="absolute inset-0"></span>Read more <span>&rarr;</span></a>
+                </div> 
+            </div>
+            <div class="title">
+                <h1>Menyediakan solusi rumah berbasis metal untuk setiap individu</h1>
+                <p>Ringan, Kuat, Cepat dan <b>SIGAP</b></p>
+                <div class="wrapper">
+                    <span id="typewriter" data-array=""></span>
+                    <span class="typewriter-cursor"></span>
+                </div>
+                <div class="title-btn">
+                    <a href="#">
+                        <button class="c-button c-button--gooey"> Get Started
+                            <div class="c-button__blobs">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            </div>
+                        </button>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+                            <defs>
+                            <filter id="goo">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+                                <feBlend in="SourceGraphic" in2="goo"></feBlend>
+                            </filter>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a href="#">Learn more <span>→</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+            <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#afec13] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+        </div>
+    </div>
+    <!-- hero section end -->
+
+    <!-- company section start -->
+    <section>
+        <div class="company-container">
+            <div class="company-title">
+                <div class="flex gap-x-4 items-center">
+                    <div class="h-[2px] bg-white w-12"></div>
+                    <h1>Company Info</h1>
+                </div>
+                <p>We ready to serve the best for you, please feel free to visit us.</p>
+            </div>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="1000">
+            <div class="company-info">
+                <div class="company-detail">
+                    <span>
+                        <h1>
+                            <svg width="20px" height="20px" viewBox="0 0 1024 1024" fill="#3B82F6" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#3B82F6"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M512 1012.8c-253.6 0-511.2-54.4-511.2-158.4 0-92.8 198.4-131.2 283.2-143.2h3.2c12 0 22.4 8.8 24 20.8 0.8 6.4-0.8 12.8-4.8 17.6-4 4.8-9.6 8.8-16 9.6-176.8 25.6-242.4 72-242.4 96 0 44.8 180.8 110.4 463.2 110.4s463.2-65.6 463.2-110.4c0-24-66.4-70.4-244.8-96-6.4-0.8-12-4-16-9.6-4-4.8-5.6-11.2-4.8-17.6 1.6-12 12-20.8 24-20.8h3.2c85.6 12 285.6 50.4 285.6 143.2 0.8 103.2-256 158.4-509.6 158.4z m-16.8-169.6c-12-11.2-288.8-272.8-288.8-529.6 0-168 136.8-304.8 304.8-304.8S816 145.6 816 313.6c0 249.6-276.8 517.6-288.8 528.8l-16 16-16-15.2zM512 56.8c-141.6 0-256.8 115.2-256.8 256.8 0 200.8 196 416 256.8 477.6 61.6-63.2 257.6-282.4 257.6-477.6C768.8 172.8 653.6 56.8 512 56.8z m0 392.8c-80 0-144.8-64.8-144.8-144.8S432 160 512 160c80 0 144.8 64.8 144.8 144.8 0 80-64.8 144.8-144.8 144.8zM512 208c-53.6 0-96.8 43.2-96.8 96.8S458.4 401.6 512 401.6c53.6 0 96.8-43.2 96.8-96.8S564.8 208 512 208z" fill=""></path></g></svg>
+                            Adress:
+                        </h1>
+                        <p>Jl.Arjuna Utara No. 89 Kebon Jeruk Jakarta 11510 Indonesia</p>
+                        <hr>
+                    </span>
+                    <span>
+                        <h1>
+                            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#3b82f6"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                            Phone:
+                        </h1>
+                        <p>+62-21-5688284-85</p>
+                        <hr>
+                    </span>
+                    <span>
+                        <h1>
+                            <svg height="20px" width="20px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#3b82f6;} </style> <g> <path class="st0" d="M490.208,175.781h-0.002v-0.238H21.792v204.8h73.445l43.883-87.772h234.059l43.586,87.772h73.441V176.611 L490.208,175.781z M98.163,248.686c-9.695,0-17.555-7.86-17.555-17.553c0-9.697,7.86-17.557,17.555-17.557 c9.691,0,17.551,7.86,17.551,17.557C115.714,240.826,107.854,248.686,98.163,248.686z M150.823,248.686 c-9.695,0-17.554-7.86-17.554-17.553c0-9.697,7.859-17.557,17.554-17.557c9.696,0,17.555,7.86,17.555,17.557 C168.378,240.826,160.519,248.686,150.823,248.686z"></path> <polygon class="st0" points="111.108,160.914 111.108,29.556 111.108,29.258 400.898,29.258 400.898,160.914 430.155,160.914 430.155,0.891 430.157,0.238 430.155,0.238 430.155,0 81.851,0 81.851,160.914 "></polygon> <polygon class="st0" points="365.222,73.988 365.222,73.752 148.433,73.752 146.642,73.75 146.642,73.752 146.402,73.752 146.402,88.381 365.222,88.381 365.222,74.047 365.222,73.988 "></polygon> <polygon class="st0" points="148.433,117.029 146.642,117.027 146.642,117.029 146.402,117.029 146.402,132.266 365.222,132.266 365.222,117.326 365.222,117.266 365.222,117.266 365.222,117.029 "></polygon> <path class="st0" d="M370.042,434.348l-0.064-0.066l-0.002,0.001c-0.06-0.062-0.107-0.108-0.168-0.17 c-29.156,29.157-69.414,47.216-113.808,47.216c-44.395,0-84.652-18.058-113.809-47.216l-21.742,21.741 C155.14,490.543,203.066,512,255.999,512c52.594,0,100.224-21.193,134.859-55.488c0.172-0.168,0.352-0.323,0.522-0.492 l-0.002-0.002c0.055-0.057,0.115-0.108,0.172-0.164C381.749,446.055,378.866,443.171,370.042,434.348z"></path> <path class="st0" d="M163.87,412.434c23.602,23.606,56.192,38.224,92.129,38.224c35.336,0,67.383-14.182,90.887-37.093 c0.348-0.336,0.73-0.623,1.074-0.963l-0.008-0.008c0.056-0.056,0.121-0.103,0.176-0.16c-7.762-7.765-15.029-15.027-21.426-21.424 l-0.08-0.084l-0.002,0.002c-0.052-0.054-0.115-0.117-0.168-0.17c-18.051,18.049-42.969,29.228-70.453,29.228 c-27.48,0-52.402-11.18-70.453-29.228L163.87,412.434z"></path> <path class="st0" d="M283.581,347.884l-0.312-0.317l-0.004,0.002c-0.041-0.042-0.129-0.129-0.168-0.168 c-6.942,6.942-16.527,11.242-27.098,11.242c-10.57,0-20.156-4.3-27.098-11.242l-21.676,21.678 c12.496,12.497,29.746,20.236,48.774,20.236c18.652,0,35.568-7.469,48-19.533c0.197-0.186,0.412-0.346,0.605-0.535l-0.008-0.008 c0.056-0.057,0.121-0.104,0.176-0.16C300.186,364.491,287.108,351.412,283.581,347.884z"></path> </g> </g></svg>
+                            Fax:
+                        </h1>
+                        <p>+62-21-5688274</p>
+                        <hr>
+                    </span>
+                    <span>
+                        <h1>
+                            <svg fill="#3b82f6" version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" stroke="#3b82f6"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M2,59h60c1.104,0,2-0.896,2-2V7c0-1.104-0.896-2-2-2H2C0.896,5,0,5.896,0,7v50C0,58.104,0.896,59,2,59z M4,55V21h56v34H4z M60,9v8H4V9H60z"></path> <path d="M10,15c0.52,0,1.04-0.21,1.42-0.59C11.79,14.04,12,13.53,12,13c0-0.52-0.21-1.04-0.59-1.41c-0.74-0.75-2.08-0.75-2.82,0 C8.21,11.96,8,12.47,8,13c0,0.53,0.21,1.04,0.59,1.42C8.96,14.79,9.479,15,10,15z"></path> <path d="M16,15c0.52,0,1.04-0.21,1.41-0.59C17.79,14.04,18,13.53,18,13c0-0.53-0.21-1.04-0.59-1.41c-0.74-0.75-2.08-0.75-2.82,0 C14.21,11.96,14,12.47,14,13c0,0.53,0.21,1.04,0.59,1.42C14.96,14.79,15.47,15,16,15z"></path> <path d="M22,15c0.53,0,1.04-0.21,1.41-0.58C23.79,14.04,24,13.53,24,13c0-0.53-0.21-1.04-0.59-1.42c-0.74-0.74-2.08-0.74-2.82,0.01 C20.21,11.96,20,12.48,20,13c0,0.53,0.21,1.04,0.59,1.42C20.96,14.79,21.47,15,22,15z"></path> <path d="M54,25H10c-1.104,0-2,0.896-2,2s0.896,2,2,2h44c1.104,0,2-0.896,2-2S55.104,25,54,25z"></path> <path d="M54,33H10c-1.104,0-2,0.896-2,2s0.896,2,2,2h44c1.104,0,2-0.896,2-2S55.104,33,54,33z"></path> <path d="M54,41H10c-1.104,0-2,0.896-2,2s0.896,2,2,2h44c1.104,0,2-0.896,2-2S55.104,41,54,41z"></path> </g> </g></svg>
+                            Website:
+                        </h1>
+                        <a href="www.tatalogam.com" class="hover:text-blue-500 text-gray-500" target="_blank">www.tatalogam.com</a>
+                        <hr>
+                    </span>
+                    <span>
+                        <h1>
+                            <svg fill="#3b82f6" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg" stroke="#3b82f6"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M0 1694.235h1920V226H0v1468.235ZM112.941 376.664V338.94H1807.06v37.723L960 1111.233l-847.059-734.57ZM1807.06 526.198v950.513l-351.134-438.89-88.32 70.475 378.353 472.998H174.042l378.353-472.998-88.32-70.475-351.134 438.89V526.198L960 1260.768l847.059-734.57Z" fill-rule="evenodd"></path> </g></svg>
+                            Email:
+                        </h1>
+                        <a href="#" class="hover:text-blue-500 text-gray-500" target="_blank">contact@tatalogam.com</a>
+                        <hr>
+                    </span>
+                </div>
+                    <img src="./img/banner.jpg" alt="tatalogam tower" />
+            </div>
+        </div>
+    </section>
+    <!-- company section end -->
+
+    <!-- contact section start -->
+    <div class="contact-container">
+        <div class="contact-detail">
+            <div class="flex gap-x-4 items-center">
+                <div class="h-[2px] bg-[#3B82F6] w-12"></div>
+                <h1>Contact us</h1>
+            </div>
+            <p class="text-gray-500 mt-[1rem] text-[20px]">Get in touch with us, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, obcaecati?</p>
+            <div class="flex gap-x-14 items-center mt-[2rem] md:flex-col md:items-start md:gap-y-7">
+                <div class="flex gap-x-4 items-center">
+                    <lord-icon
+                        src="https://cdn.lordicon.com/tftaqjwp.json"
+                        trigger="loop"
+                        delay="3000"
+                        colors="primary:#3B82F6"
+                        style="width:40px;height:40px;">
+                    </lord-icon>
+                    <div>
+                        <h2 class="text-[18px] md:text-[18px]">Phone Number</h2>
+                        <p class="text-[16px] text-gray-500">+62-21-5688284-85</p>
+                    </div>
+                </div>
+                <div class="flex gap-x-4 items-center">
+                    <lord-icon
+                        src="https://cdn.lordicon.com/diihvcfp.json"
+                        trigger="loop"
+                        delay="3000"
+                        colors="primary:#3B82F6"
+                        style="width:40px;height:40px">
+                    </lord-icon>
+                    <div>
+                        <h2 class="text-[18px]">Email Adress</h2>
+                        <p class="text-[16px] text-gray-500">contact@tatalogam.com</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="contact-input" data-aos="zoom-in-left" data-aos-duration="1000">
+            <form>
+                <div class="input-container">
+                    <input type="text" id="name" required="">
+                    <label for="name" class="label">Name</label>
+                    <div class="underline"></div>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="company" required="" class="invalid">
+                    <label for="company" class="label">Company</label>
+                    <div class="underline"></div>
+                    <p class="absolute text-sm text-red-500">*please fill this with correct data</p>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="email" required="">
+                    <label for="email" class="label">Email</label>
+                    <div class="underline"></div>
+                </div>
+                <div class="input-container">
+                        <label for="message" class="block mb-2 text-sm font-medium text-gray-500">Your message</label>
+                        <textarea id="message" rows="4" class="block p-2 w-full text-sm text-gray-400 bg-gray-50 rounded-lg border border-gray-300" placeholder="Write your thoughts here..."></textarea>
+                </div>
+                <button type="submit" class="text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center mb-5">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <!-- contact section end -->
+
+    <!-- footer start -->
+    <div class="flex items-end w-full min-h-[60vh] bg-gray-100">        
+        <footer class="bg-gray-400 w-full">
+            <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+                <div class="sm:flex sm:items-center sm:justify-between">
+                    <a href="#" class="flex items-center mb-4 sm:mb-0">
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">PT Tatalogam Lestari</span>
+                    </a>
+                    <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0">
+                        <li>
+                            <a href="#" class="mr-4 text-white hover:underline md:mr-6 ">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mr-4 text-white hover:underline md:mr-6">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mr-4 text-white hover:underline md:mr-6 ">Licensing</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="my-6 border-gray-200 sm:mx-auto" />
+                <span class="block text-sm text-white sm:text-center">© 2023 <a href="https://flowbite.com/" class="hover:underline"></a>All Rights Reserved.</span>
+            </div>
+        </footer>
+    </div>
+    <!-- footer end -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</body>
+<script src="./script.js"></script>
+
+</html>
